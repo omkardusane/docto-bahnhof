@@ -28,3 +28,27 @@ write authslice, mainlayout, main.ts,  /src/store/index.ts ,
 ├── main.tsx
 └── index.html
 ```
+
+
+
+/                           # Public landing page
+/about                      # About page
+/contact                    # Contact page
+
+# Auth Routes
+/auth/login                 # General login (redirects based on role)
+/auth/register              # Register general user (patient)
+/auth/register/doctor       # Doctor registration form
+/auth/forgot-password       # Password reset
+
+# Admin Routes (Protected)
+/admin                      # Admin login page
+/admin/dashboard            # Admin dashboard
+/admin/doctors              # Manage all doctors, add approve, remove & clinics
+/admin/settings             # Admin settings
+
+# Doctor Routes (Protected)
+/doctor                     # Doctor dashboard
+/doctor/profile             # Doctor profile management
+/doctor/clinics             # View assigned clinics
+-- do clinic mgmt, appointments mgmt, schedule mgmt

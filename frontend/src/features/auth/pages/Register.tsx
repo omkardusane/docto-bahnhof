@@ -1,12 +1,10 @@
 // Auth Page
 import React from 'react';
 
-function App() {
+export default function Register() {
   return (
     <div>
-      <h1>Auth Page</h1>
+      <h1>Register Page</h1>
     </div>
   );
 }
-
-export default App;
