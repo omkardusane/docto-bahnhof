@@ -4,5 +4,3 @@
 4. Clinic's availabilities in general
 5. Patient's basic communication to request if an appointment can be made in certain range
 
-
-

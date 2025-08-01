@@ -1,5 +1,8 @@
 codebase structure:
 
+write authslice, mainlayout, main.ts,  /src/store/index.ts ,
+
+
 ```
 /src
 ├── /assets                    # Images, icons, etc.
