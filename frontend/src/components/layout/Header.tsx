@@ -1,23 +1,18 @@
 import { Link } from 'react-router'
-
+import './header.css'
 export default function Header() {
   return (
-    <header className="bg-gray-800 text-white p-4">
-      <nav className="container mx-auto flex justify-between items-center">
+    <header className="navbar">
+      <nav>
         <Link to="/" className="text-xl font-bold">
           Docto-Bahnhof
         </Link>
-        <ul className="flex space-x-4">
-          <li>
-            <Link to="/" className="hover:text-gray-300">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/discovery" className="hover:text-gray-300">
-              Discover
-            </Link>
-          </li>
+        <ul className="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/auth">Login</a></li>
+          <li><a href="/app">User App</a></li>
+          <li><a href="/doctor">Doctor App</a></li>
+          <li><a href="/admin">Admin App</a></li>
         </ul>
       </nav>
     </header>
