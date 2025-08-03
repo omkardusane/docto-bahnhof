@@ -1,5 +1,6 @@
 // Auth Page
 import React from 'react';
+import { Link } from 'react-router'
 
 export default function Login() {
   return (
@@ -41,6 +42,9 @@ export default function Login() {
           </button>
         </div>
       </form>
+      <p className="mt-6 text-center text-sm text-gray-600">
+        Don't have an account? <Link to="/auth/register" className="font-medium text-blue-600 hover:underline">Request here</Link>
+      </p>
     </div>
   );
 }
