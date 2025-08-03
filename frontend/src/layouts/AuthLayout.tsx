@@ -4,10 +4,10 @@ import Header from '../components/layout/Header'
 export default function AuthLayout() {
   return (
 
-    <div className="flex min-h-screen">
+    <div className="flex">
       {/* <Header /> */}
       {/* Left side: Illustration or brand */}
-      <div className="hidden md:flex w-1/2 bg-blue-600 text-white items-center justify-center">
+      <div className="hidden md:flex w-2/3 bg-blue-600 text-white items-center justify-center">
         <h1 className="text-3xl font-bold">Doctobahnhof</h1>
       </div>
 
