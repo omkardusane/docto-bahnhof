@@ -1,5 +1,6 @@
 // Auth Page
 import React from 'react';
+import { Link } from 'react-router'
 
 export default function Register() {
   return (
@@ -47,6 +48,9 @@ export default function Register() {
         </button>
         <p className="mt-6 text-center text-sm text-gray-600">
           We will send you an email with instructions on how to confirm and verify your account.
+        </p>
+        <p className="mt-6 text-center text-sm text-gray-600">
+          Already registered? <Link to="/auth" className="font-medium text-blue-600 hover:underline">Login here</Link>
         </p>
       </form>
     </div>

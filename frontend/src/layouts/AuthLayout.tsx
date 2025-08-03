@@ -7,8 +7,11 @@ export default function AuthLayout() {
     <div className="flex">
       {/* <Header /> */}
       {/* Left side: Illustration or brand */}
-      <div className="hidden md:flex h-[80vh] w-2/3 bg-blue-600 text-white items-center justify-center">
+      <div className="hidden md:flex h-[83vh] w-2/3 bg-gradient-to-r from-[#006980] to-[#00c3e6] text-white items-center justify-center">
         <h1 className="text-3xl font-bold">Doctobahnhof</h1>
+        <hr className="my-4 border-blue-700" />
+
+        <p>Branding here</p>
       </div>
 
       {/* Right side: Auth Pages */}
