@@ -15,7 +15,7 @@ export default function AuthLayout() {
       </div>
 
       {/* Right side: Auth Pages */}
-      <div className="flex-1 flex items-center justify-center bg-gray-50">
+      <div className="flex-1 flex items-center justify-center bg-gradient-to-r to-[#006980] from-[#00c3e6]">
         <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
           <Outlet />
           {/* 👆 This is where Login or Register Page renders */}
