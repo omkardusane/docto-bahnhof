@@ -1,6 +1,7 @@
 .navbar {
-    background-color: #333;
-    padding: 1rem 2rem;
+    background-color: #007ea4;
+    padding: 0.1rem 2rem;
+    font-style: italic;
 }
 
 .nav-list {
@@ -22,5 +23,5 @@
 }
 
 .layout-content {
-    padding: 1rem;
+    /* padding: 1rem; */
 }

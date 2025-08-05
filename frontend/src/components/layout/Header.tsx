@@ -4,9 +4,9 @@ export default function Header() {
   return (
     <header className="navbar">
       <nav>
-        <Link to="/" className="text-xl font-bold">
+        {/* <Link to="/" className="text-xl font-bold">
           Docto-Bahnhof
-        </Link>
+        </Link> */}
         <ul className="nav-list">
           <li><a href="/">Home</a></li>
           <li><a href="/auth">Login</a></li>
