@@ -12,4 +12,10 @@ todo:
 - run time env management
 - build process setup
 - tests setup
-- 
+- features:
+    - doctor registration
+    - admin login
+    - admin approve dr
+    - doctor self profile mgmt
+    - user registration
+    - user find doctors
