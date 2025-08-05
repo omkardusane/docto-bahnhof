@@ -11,7 +11,7 @@ export default function AuthLayout() {
         <h1 className="text-3xl font-bold">Doctobahnhof</h1>
         <hr className="my-4 border-blue-700" />
 
-        <p>Branding here</p>
+        <p> <i>Branding</i></p>
       </div>
 
       {/* Right side: Auth Pages */}
