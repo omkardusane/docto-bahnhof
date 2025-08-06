@@ -25,3 +25,36 @@
 .layout-content {
     /* padding: 1rem; */
 }
+
+.sub-menu {
+    position: absolute;
+    background-color: #007ea4;
+    padding: 0.5rem;
+    top: 100%;
+    left: 0;
+    min-width: 100px;
+    width: 100%;
+    display: none;
+    z-index: 2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sub-menu-item {
+    display: block;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-list>li {
+    position: relative;
+}
+
+.nav-list>li:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li {
+    display: block;
+}
