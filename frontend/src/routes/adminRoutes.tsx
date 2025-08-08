@@ -16,7 +16,7 @@ const AdminRoutes = (
       </AdminRoute>
     }>
       <Route index element={<AdminDashboard />} />
-      <Route path="doctors" element={<AdminDoctors />} />
+      <Route path="manage-doctors" element={<AdminDoctors />} />
     </Route>
   </>
 )

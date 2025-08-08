@@ -5,7 +5,7 @@ import type { RootState } from '../../store'
 
 export default function AdminRoute({ children }: { children: React.ReactNode }) {
     // const { user, isAuthenticated } = useSelector((state: RootState) => state.auth)
-    const isAuthenticated = false;  // temp
+    const isAuthenticated = true;  // temp
     const user = { role: 'admin' }; // temp
     if (!isAuthenticated || user?.role !== 'admin') {
         return <Navigate to="/admin/auth/login" replace />
