@@ -19,3 +19,12 @@ todo:
     - doctor self profile mgmt
     - user registration
     - user find doctors
+
+
+
+# Admin managing doctors
+we need 4 functions,  
+1. get all doctors with filters as params, status=approved/unapproved, and respond with basic logic 
+2. get one doctor profile ( detailed doctor object with name email specialities array, education, clinics array with name and id of clinic not else, )
+3. add a new doctor: params(name, email, )
+4. change status of a doctor, 4.2 generate password for doctor
