@@ -20,6 +20,24 @@ const doctors: Doctor[] = [
     specialities: ['Dermatology'],
     education: 'MBBS',
     clinics: [{ id: 'c2', name: 'Westside Clinic' }]
+  },
+    {
+    id: '11',
+    name: 'Dr. Alice 6',
+    email: 'alice@example.com',
+    status: 'approved',
+    specialities: ['Cardiology'],
+    education: 'MD',
+    clinics: [{ id: 'c1', name: 'Central Clinic' }]
+  },
+  {
+    id: '12',
+    name: 'Dr. Bob 3',
+    email: 'bob@example.com',
+    status: 'unapproved',
+    specialities: ['Dermatology'],
+    education: 'MBBS',
+    clinics: [{ id: 'c2', name: 'Westside Clinic' }]
   }
 ];
 
