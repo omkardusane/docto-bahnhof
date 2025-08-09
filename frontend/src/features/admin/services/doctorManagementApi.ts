@@ -1,4 +1,5 @@
 import type { DoctorStatus, Doctor } from "../../../types/doctors";
+import type { DoctorFormEntry } from "../components/AddNewDoctor";
 import type { DoctorFilters } from "../types";
 
 // Mock data for demonstration
@@ -21,7 +22,7 @@ const doctors: Doctor[] = [
     education: 'MBBS',
     clinics: [{ id: 'c2', name: 'Westside Clinic' }]
   },
-    {
+  {
     id: '11',
     name: 'Dr. Alice 6',
     email: 'alice@example.com',
@@ -58,15 +59,15 @@ export function getDoctorProfile(id: string): Doctor | undefined {
 }
 
 // 3. Add a new doctor
-export function addDoctor(name: string, email: string): Doctor {
-  const newDoctor: Doctor = {
+export function addDoctor(docEntry: DoctorFormEntry): Doctor {
+  const newDoctor: Partial<Doctor> = {
     id: (doctors.length + 1).toString(),
-    name,
-    email,
+    name: docEntry.name,
+    email: docEntry.email,
     status: 'unapproved',
-    specialities: [],
-    education: '',
-    clinics: []
+    // specialities: [],
+    // education: '',
+    // clinics: []
   };
   doctors.push(newDoctor);
   return newDoctor;

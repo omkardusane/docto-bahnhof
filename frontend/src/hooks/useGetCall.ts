@@ -4,6 +4,7 @@ export function useGetCall(props: {
     url: string;
     params?: Record<string, any>;
     mockData?: any[];
+    dependencies?: any[];
 }) {
     const [response, setResponse] = useState<any[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
@@ -20,7 +21,7 @@ export function useGetCall(props: {
                 setResponse(props.mockData || []);
             }
         }, 300); // Simulate network delay
-    }, []);
+    }, props.dependencies || []);
 
     return {
         response,
