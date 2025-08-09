@@ -5,7 +5,8 @@ import AdminLayout from '../layouts/AdminLayout'
 
 import AdminLogin from '../features/admin/pages/AdminLogin'
 import AdminDashboard from '../features/admin/pages/AdminDashboard'
-import AdminDoctors from '../features/admin/pages/AdminDoctors'
+import AdminDoctors from '../features/admin/pages/ManageDoctors'
+import ManageOneDoctor from '../features/admin/pages/ManageOneDoctor'
 
 const AdminRoutes = (
   <>
@@ -17,6 +18,7 @@ const AdminRoutes = (
     }>
       <Route index element={<AdminDashboard />} />
       <Route path="manage-doctors" element={<AdminDoctors />} />
+      <Route path="one-doctor" element={<ManageOneDoctor />} />
     </Route>
   </>
 )

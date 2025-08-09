@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
-import { getAllDoctors } from "../services/doctorManagementApi";
+import AddNewDoctor from "../components/AddNewDoctor";
+import { Link } from "react-router";
+import { getAllDoctors, addDoctor } from "../services/doctorManagementApi";
 import type { Doctor } from "../../../types/doctors";
 import { useGetCall } from "../../../hooks/useGetCall";
 
-export default function AdminDoctors() {
+export default function ManageDoctors() {
+  const [addingDoctor, setAddingDoctor] = useState(false);
   const {
     response: doctorsList,
     loading,
@@ -17,31 +20,23 @@ export default function AdminDoctors() {
   });
 
   useEffect(() => {
-    /*   const fetchDoctors = async () => {
-        try {
-          setLoading(true);
-          // In a real app, you would call your API service here
-          const data = await getAllDoctors();
-          setDoctors(data);
-          setError(null);
-        } catch (err) {
-          setError('Failed to fetch doctors.');
-          console.error(err);
-        } finally {
-          setLoading(false);
-        }
-      }; */
+  }, []);
 
-    // fetchDoctors();
-  }, []); // Empty dependency array means this effect runs once on mount
-
- 
   return (
     <div className="p-8">
       <h1 className="text-2xl font-bold mb-6">Admin Doctors Management</h1>
 
       {loading && <div className="text-center">Loading doctors...</div>}
       {error && <div className="text-red-500 bg-red-100 p-4 rounded-md">{error}</div>}
+      <div className="mb-6">
+        <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+         onClick={() => setAddingDoctor(true)}
+        >Add Doctor</button>
+        {addingDoctor &&
+          <AddNewDoctor onSubmit={() => { }} onClose={() => setAddingDoctor(false)}>
+
+          </AddNewDoctor>
+        }</div>
 
       {!loading && !error && (
         <div className="space-y-4">
@@ -52,15 +47,11 @@ export default function AdminDoctors() {
                 {doctor.status} , {doctor.email}
               </p>
               <p className="text-gray-600">{doctor.specialities.map(String).join(', ')}</p>
-              {/* 
-                A link to a single doctor view can be added here.
-                You'll need to have react-router-dom installed and set up.
-                Example:
-                import { Link } from 'react-router-dom';
-                <Link to={`/admin/doctors/${doctor.id}`} className="text-blue-500 hover:underline mt-2 inline-block">
+              {
+                <Link to={`/admin/one-doctor/${doctor.id}`} className="text-blue-500 hover:underline mt-2 inline-block">
                   View Details
-                </Link> 
-              */}
+                </Link>
+              }
             </div>
           ))}
         </div>
