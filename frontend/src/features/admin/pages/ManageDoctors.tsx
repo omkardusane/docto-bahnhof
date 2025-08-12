@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import AddNewDoctor , {type DoctorFormEntry }from "../components/AddNewDoctor";
-import { Link } from "react-router"; 
+import AddNewDoctor, { type DoctorFormEntry } from "../components/AddNewDoctor";
+import { Link } from "react-router";
 import { getAllDoctors, addDoctor } from "../services/doctorManagementApi";
 import type { Doctor } from "../../../types/doctors";
 import { useGetCall } from "../../../hooks/useGetCall";
@@ -17,17 +17,13 @@ export default function ManageDoctors() {
     loading,
     error
   } = useGetCall({
-    url: '/api/doctors', 
+    url: '/api/doctors',
     params: {
-      status: 'unapproved', 
-    }, 
+      status: 'unapproved',
+    },
     mockData: getAllDoctors({ status: 'unapproved' }), // Fallback to mock data
     dependencies: [refreshTrigger] // Re-fetch data when this state changes
   });
-
-  // This useEffect is now empty and can be removed, but is left here for context
-  useEffect(() => {
-  }, [refreshTrigger]);
 
   // Async function to handle the form submission for a new doctor
   const handleAddNewDoctor = async (entry: DoctorFormEntry) => {
@@ -51,19 +47,21 @@ export default function ManageDoctors() {
 
       {loading && <div className="text-center text-gray-500">Loading doctors...</div>}
       {error && <div className="text-red-500 bg-red-100 p-4 rounded-md">Error: {error}</div>}
-      
+
       <div className="mb-6">
-        <button 
+        <button
           className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors duration-150"
-          onClick={() => setAddingDoctor(true)}
+          onClick={() => {
+            console.log('Add New Doctor button clicked');
+            setAddingDoctor(true)
+          }}
         >
           Add Doctor
         </button>
-        {/* Pass the isVisible prop to control the modal's display */}
-        <AddNewDoctor 
+        <AddNewDoctor
           isVisible={addingDoctor}
-          onSubmit={handleAddNewDoctor} 
-          onClose={() => setAddingDoctor(false)} 
+          onSubmit={handleAddNewDoctor}
+          onClose={() => setAddingDoctor(false)}
         />
       </div>
 
